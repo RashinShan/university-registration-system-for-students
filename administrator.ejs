@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Faculty of Technology</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+    .navbar {
+      overflow: hidden;
+      background-color: #333333;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    .navbar li {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .navbar li:hover {
+        background: #aaaaaa;
+        color: black;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #00ffea4d;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    /* Add padding to containers */
+    .container {
+      padding: 16px;
+      width: 50%;
+      background-color: #4249c263;
+    }
+    
+    /* Full-width input fields */
+    input[type=text], input[type=password], input[type=date], input[type=tel], textarea {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+
+    .top_margin {
+        margin-top: 80px;
+    }
+    
+    input[type=text]:focus, input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+    
+    /* Overwrite default styles of hr */
+    hr {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 25px;
+    }
+    
+    /* Set a style for the submit button */
+    .registerbtn {
+      background-color: #04AA6D;
+      color: white;
+      padding: 16px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+    
+    .registerbtn:hover {
+      opacity: 1;
+    }
+    
+    /* Add a blue text color to links */
+    a {
+      color: blue;
+    }
+    
+  </style>
+</head>
+
+<body>
+<!--Navigation bar-->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <!--<a class="navbar-brand" href="#">FOTS</a>-->
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="home">Home</a></li>
+			<li><a href="login">Login</a></li>
+			<li><a href="registration">Registration</a></li>
+			<li class="active"><a href="administrator">Administrator</a></li>
+        </ul>
+    </div>
+</nav>
+<!--end of Navigation bar-->
+
+<form action="/delcandidate"; class="top_margin" method="post">
+  <div class="container">
+    <h1>delete candidates</h1>
+    <hr>
+
+    <label for="Registation_Number"><b>Registation_Number</b></label>
+    <input type="text" placeholder="Enter Registation_Number" name="regnum" id="regnum" required>
+    <hr>
+
+    <button type="submit" class="loginbtn">delete</button>
+  </div>
+</form>
+
+
+<form action="/deluser"; class="top_margin" method="post">
+  <div class="container">
+    <h1>delete user account</h1>
+    <hr>
+
+    <label for="username"><b>username</b></label>
+    <input type="text" placeholder="Enter username" name="uname" id="uname" required>
+    <hr>
+
+    <button type="submit" class="loginbtn">delete</button>
+  </div>
+</form>
+
+
+<form action="/delcourse"; class="top_margin" method="post">
+  <div class="container">
+    <h1>delete courses</h1>
+    <hr>
+
+    <label for="Registation_Number"><b>Registation_Number</b></label>
+    <input type="text" placeholder="Enter Registation_Number" name="regnum" id="regnum" required>
+    <hr>
+
+    <button type="submit" class="loginbtn">delete</button>
+  </div>
+</form>
+
+
+<form action="/delfaculty"; class="top_margin" method="post">
+  <div class="container">
+    <h1>delete facultys</h1>
+    <hr>
+
+    <label for="Registation_Number"><b>Registation_Number</b></label>
+    <input type="text" placeholder="Enter Registation_Number" name="regnum" id="regnum" required>
+    <hr>
+
+    <button type="submit" class="loginbtn">delete</button>
+  </div>
+</form>
+
+
+<form action="/delstudentreg"; class="top_margin" method="post">
+  <div class="container">
+    <h1>delete registration details</h1>
+    <hr>
+
+    <label for="Registation_Number"><b>Registation_Number</b></label>
+    <input type="text" placeholder="Enter Registation_Number" name="regnum" id="regnum" required>
+    <hr>
+
+    <button type="submit" class="loginbtn">delete</button>
+  </div>
+</form>
+
+
+<div id="reg_div">
+
+  <form action="/updateca"; class="top_margin" method="post">
+      <div class="container">
+      <h1>Update candidate details</h1>
+      
+
+      <hr>
+
+      <label for="nicNum"><b>NIC Number</b></label>
+      <input type="text" placeholder="Enter NIC Number" name="nicNum" id="nicNum" required>
+  
+      <label for="firstName"><b>First name</b></label>
+      <input type="text" placeholder="Enter First name" name="firstName" id="firstName" required>
+
+      <label for="lastName"><b>Last name</b></label>
+      <input type="text" placeholder="Enter Last name" name="lastName" id="lastName" required>
+      
+      <label for="dob"><b>Gender</b></label><br>
+      <input type="radio" id="genderM" name="gender" value="male" required>
+      <label for="genderM" style="font-weight: lighter; margin-right: 10px;">Male</label>
+      <input type="radio" id="genderF" name="gender" value="female">
+      <label for="genderF" style="font-weight: lighter;">Female</label><br><br>
+
+      <label for="address"><b>Address</b></label>
+      <input type="text" placeholder="Enter Address" name="address" id="address" required>
+
+      <label for="dob"><b>Date of Birth</b></label>
+      <input type="date" placeholder="Enter Date of Birth" name="dob" id="dob" required>
+  
+     
+      <hr>
+  
+      <label for="regNum"><b>Registration Number</b></label>
+      <input type="text" placeholder="Enter Registration Number" name="regNum" id="regNum" required>
+
+      <hr>
+
+     
+      
+     
+      <button type="submit" class="registerbtn">Register</button>
+      </div>
+      
+      
+  </form>
+
+
+
+  <form action="/updatef"; class="top_margin" method="post">
+      <div class="container">
+      <h1>Update faculty details</h1>
+
+      <hr>
+  
+      <label for="regNum"><b>Registration Number</b></label>
+      <input type="text" placeholder="Enter Registration Number" name="regNum" id="regNum" required>
+
+      
+      <label for="semester"><b>Semester</b></label>
+      <input type="text" placeholder="Enter Semester" name="semester" id="semester" required>
+
+      <label for="department"><b>Department</b></label>
+      <input type="text" placeholder="Enter Department" name="department" list="department" required>
+      <datalist id="department">
+          <option value="ET">
+          <option value="BST">
+          <option value="ICT">
+      </datalist>
+
+      <label for="courses"><b>Courses</b></label>
+      <textarea id="courses" name="courses" placeholder="Enter Courses" required></textarea>
+
+      <hr>
+
+     
+      
+    
+      <button type="submit" class="registerbtn">submit</button>
+      </div>
+    
+  </form>
+
+
+
+  <form action="/updateu"; class="top_margin" method="post">
+    <div class="container">
+    <h1>Update username </h1>
+   
+    <hr>
+
+    <label for="username"><b>User Name</b></label>
+    <input type="text" placeholder="Enter User Name" name="username" id="username" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+    
+
+    <hr>
+   
+    <button type="submit" class="registerbtn">submit</button>
+    </div>
+   
+</form>
+
+
+<form action="/updatec"; class="top_margin" method="post">
+  <div class="container">
+  <h1>Update course details</h1>
+ 
+  <hr>
+
+  <label for="course name"><b>course_Name</b></label>
+  <input type="text" placeholder="Enter course name" name="cname" id="cname" required>
+
+  <label for="regNum"><b>Registration Number</b></label>
+  <input type="text" placeholder="Enter Registration Number" name="regNum" id="regNum" required>
+  
+
+  <hr>
+ 
+  <button type="submit" class="registerbtn">submit</button>
+  </div>
+ 
+</form>
+
+
+
+<form action="/updates"; class="top_margin" method="post">
+  <div class="container">
+  <h1>change username </h1>
+  
+
+  <label for="regNum"><b>Registration Number</b></label>
+  <input type="text" placeholder="Enter Registration Number" name="regNum" id="regNum" required>
+
+  <label for="regDate"><b>Registation Date</b></label>
+  <input type="date" placeholder="Enter Registation Date" name="regDate" id="regDate" required>
+ 
+  <hr>
+  
+ 
+  <button type="submit" class="registerbtn">submit</button>
+  </div>
+  
+  
+</form>
+
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Faculty of Technology</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+    .navbar {
+      overflow: hidden;
+      background-color: #333333;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    .navbar li {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .navbar li:hover {
+        background: #aaaaaa;
+        color: black;
+    }
+
+    body {
+        background-color: #00ffea4d;
+    }
+
+    .top_margin {
+        margin-top: 100px;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<!--Navigation bar-->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <!--<a class="navbar-brand" href="#">FOTS</a>-->
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="home">Home</a></li>
+			<li><a href="login">Login</a></li>
+			<li><a href="registration">Registration</a></li>
+			<li class="active"><a href="administrator">Administrator</a></li>
+        </ul>
+    </div>
+</nav>
+<!--end of Navigation bar-->
+
+
+
+
+
+
+
+<div class="container top_margin"; id="home_div">
+    <center>
+        <h1><b>UNIVERSITY OF VAUNIYA</b></h1>
+        <h3>Faculty of Technology</h3>
+        <h1>candidates details</h1>
+        <table border="1">
+            <tr>
+               
+                <th>NIC</th>
+                <th>First_Name</th>
+                <th>Last_Name</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>DOB</th>
+                <th>Registation_Number</th>
+                
+            </tr>
+            <% if(candidate.length> 0){ %>
+                <% for(var i=0;i<candidate.length;i++){ %>
+            <tr>
+               
+               <td><%- candidate[i].NIC %></td>
+               <td><%- candidate[i].First_Name %></td>
+               <td><%- candidate[i].Last_Name %></td>
+               <td><%- candidate[i].Gender %></td>
+               <td><%- candidate[i].Address %></td>
+               <td><%- candidate[i].DOB %></td>
+               <td><%- candidate[i].Registation_Number %></td>
+              
+               
+            </tr>
+            <% } %>
+               <% } %>
+        </table >
+       
+
+        <h1>course details</h1>
+        <table border="3">
+            <tr>
+                <th>course name</th>
+                <th>registration number</th>
+            </tr>
+            <% if(courses.length> 0){ %>
+                <% for(var i=0;i<courses.length;i++){ %>
+            <tr>
+                
+               <td><%- courses[i].courses_Name %></td>
+               <td><%- courses[i].Registation_Number %></td>
+              
+              
+               
+            </tr>
+            <% } %>
+               <% } %>
+           
+        </table>
+
+<h1>faculty_details</h1>
+<table border="1">
+    <tr>
+        <th>Department_Name</th>
+        <th>Semester_Name</th>
+        <th>registration number</th>
+    </tr>
+    <% if(faculty_details.length> 0){ %>
+        <% for(var i=0;i<faculty_details.length;i++){ %>
+    <tr>
+        
+       <td><%- faculty_details[i].Department_Name %></td>
+       <td><%- faculty_details[i].Semester_Name %></td>
+       <td><%- faculty_details[i].Registation_Number %></td>
+      
+      
+       
+    </tr>
+    <% } %>
+       <% } %>
+</table>
+<h1>student_registation details</h1>
+<table border="1">
+    <tr>
+        <th>Registation_Number</th>
+        <th>Registation_Date</th>
+    </tr>
+    <% if(student_registation.length> 0){ %>
+        <% for(var i=0;i<student_registation.length;i++){ %>
+    <tr>
+        
+       <td><%- student_registation[i].Registation_Number %></td>
+       <td><%- student_registation[i].Registation_Date %></td>
+      
+      
+      
+       
+    </tr>
+    <% } %>
+       <% } %>
+   
+</table>
+    </center>
+</div>
+
+</body>
+</html>
